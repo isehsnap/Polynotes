@@ -1,0 +1,40 @@
+<%- include('../partials/navbar') %>
+
+
+<form action="" method="post">
+    <h1>Recherche de notes</h1>
+    <hr>
+
+    <p>Entrez les termes de votre recherche : </p>
+    <p>(Les éléments de recherche sont facultatifs, mais il faut au moins en entrer un)</p>
+
+    <label for="num-étu">Numéro de l'étudiant :</label>
+    <input type="text" id="num-étu" name="num-étu" required placeholder="Numéro">
+    <br>
+    
+    <label for="nom-étu">Nom de l'étudiant :</label>
+    <input type="text" id="nom-étu" name="nom-étu" required placeholder="Nom">
+    <br>
+
+    <label for="promo">Promotion :</label>
+    <input type="text" id="promo" name="promo" required placeholder="Promotion">
+    <br>
+
+    <label for="semestre">Semestre :</label>
+    <input type="text" id="semestre" name="semestre" required placeholder="Semestre">
+    <br>
+
+    <label for="id-UE">Identifiant d'UE :</label>
+    <input type="text" id="id-UE" name="id-UE" required placeholder="Identifiant UE">
+    <br>
+
+    <label for="nom-ECUE">Nom d'une matière :</label>
+    <input type="text" id="nom-ECUE" name="nom-ECUE" required placeholder="Nom de la matière">
+    <br>
+
+    <label for="nom-ECUE">Identifiant d'une matière :</label>
+    <input type="text" id="id-ECUE" name="id-ECUE" required placeholder="Identifiant matière">
+    <br><br>
+
+    <input type="submit" value="Rechercher">
+</form>

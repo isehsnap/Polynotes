@@ -1,10 +1,19 @@
 <div class="login-form">
     <form action="/" method="POST">
-        <input class="userform" name="username" placeholder="Identifiant"><br>
-        <input class="userform" name="password" type="password" placeholder="Mot de passe"><br>
+        <h1>Authentification</h1>
+        <hr>
+
+        <label for="username">Nom d'utilisateur :</label>
+        <input class="userform" name="username" type="text"  placeholder="Identifiant" required><br>
+        
+        <label for="password">Mot de passe :</label>
+        <input class="userform" name="password" type="password" placeholder="Mot de passe" required><br>
         <% if (messages.error) { %>
-            <%= messages.error %> <a href="/forgot">Mot de passe oublié ?</a>
+            <p class="message-error"> <%= messages.error %> </p>
         <% } %>
+
+        <a class="forgot" href="/forgot">Mot de passe oublié ?</a>
+
         <input class="btn" type="submit" value="Se connecter">
     </form>
 </div>

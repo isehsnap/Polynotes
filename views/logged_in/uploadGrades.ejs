@@ -1,0 +1,12 @@
+<%- include('../partials/navbar') %>
+
+<form>
+    <h1>Publier notes</h1>
+    <hr>
+
+    <label for="fileInput">Choisir un fichier Excel :</label>
+    <input type="file" id="fileInput" name="fileInput" accept=".xls, .xlsx">
+    <br>
+
+    <input type="submit" value="Publier" onclick="uploadFile()">
+</form>

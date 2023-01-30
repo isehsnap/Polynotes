@@ -1,1 +1,31 @@
-first connection
+<form id="reset-form" method="POST" action="/firstConnection?method=PUT">
+    <h1>Réinitialisation de mot de passe</h1>
+    <p>Bienvenue sur PolyNotes.</p>
+    <p>Pour renforcer la sécurité de votre compte, nous vous demandons de réinitialiser votre mot de passe et de choisir une question secrète :</p>
+    <hr>
+    
+    <label for="password">Nouveau mot de passe :</label>
+    <input type="password" id="password" name="password"  placeholder="Mot de passe" required>
+    <br>
+
+    <label for="password-confirm">Confirmation de mot de passe :</label>
+    <input type="password" id="password-confirm" name="password-confirm"  placeholder="Mot de passe" required>
+    <br>
+
+    <label for="secret-question">Question secrète :</label>
+    <select id="secret-question" name="secret-question" required>
+        <option value="">--Sélectionnez une question--</option>
+        <option value="q1">Quel est le nom de jeune fille de votre mère ?</option>
+        <option value="q2">Quel était le nom de votre premier animal de compagnie ?</option>
+        <option value="q3">Quel était le nom de votre première école ?</option>
+    </select>
+    <br>
+    <!--TODO : message d'erreur-->
+
+    <label for="secret-answer">Réponse à la question secrète :</label>
+    <input type="text" id="secret-answer" name="secret-answer" required>
+    <br>
+    <!--TODO : message d'erreur-->
+
+    <input type="submit" value="Réinitialiser le mot de passe">
+  </form>

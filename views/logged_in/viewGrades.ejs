@@ -1,0 +1,29 @@
+<%- include('../partials/navbar') %>
+
+<form id="reset-form">
+    <h1>Consulter notes</h1>
+    <hr>
+
+    <p>Sélectionnez la promotion et le semestre recherché.</p>
+    
+    <select id="secret-promo" name="secret-promo" required>
+        <option value="">--Promotion--</option>
+        <option value="mothers_maiden_name">Quel est le nom de jeune fille de votre mère ?</option>
+        <option value="first_pet_name">Quel était le nom de votre premier animal de compagnie ?</option>
+        <option value="first_school">Quel était le nom de votre première école ?</option>
+    </select>
+    <br>
+
+    <select id="secret-promo" name="secret-promo" required>
+        <option value="">--Semestre--</option>
+        <option value="S5">Semestre 5</option>
+        <option value="S6">Semestre 6</option>
+        <option value="S7">Semestre 7</option>
+        <option value="S8">Semestre 8</option>
+        <option value="S9">Semestre 9</option>
+        <option value="S10">Semestre 10</option>
+    </select>
+    <br>
+
+    <input type="submit" value="Consulter">
+</form>
