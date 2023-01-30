@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+
+.header {
+    text-align: center;
+    width: auto;
+    background-color: #b9cdfc;
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    border-bottom: 1px solid #ccc;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.login-form {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+    margin-top: 10em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.userform {
+    width: 100%;
+    height: 2rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.btn {
+    width: 100%;
+    height: 2rem;
+    background-color: #b9cdfc;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(98, 98, 98);
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: #8eaef8;
+}

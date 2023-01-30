@@ -1,0 +1,18 @@
+<% if (secretQuestion == null) {secretQuestion = 'Pas encore de question secrète'} %>
+<form action="/forgot?_method=DELETE" method="post">
+  <h1>Réinitialisation de mot de passe</h1>
+  <hr>
+  <input type="text" id="username" name="username" placeholder="Identifiant" required><br><br>
+  <input type="password" id="password" name="password" placeholder="Nouveau mot de passe" required>
+  <br><br>
+  <input type="password" id="password_confirm" name="password_confirm" placeholder="Répétez le mot de passe" required>
+  <br><br>
+
+  <label for="question">Question secrète :</label>
+  <input type="text" id="question" name="question" disabled value="<%= secretQuestion %>">
+  <br><br>
+  <input type="password" id="answer" name="answer" placeholder="Reponse" required>
+  <br><br>
+
+  <input type="submit" value="Réinitialiser le mot de passe">
+</form>

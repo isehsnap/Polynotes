@@ -1,0 +1,106 @@
+nav {
+    display: flex; /* Permet d'aligner les éléments horizontalement */
+    justify-content: space-between; /* Aligne les éléments à droite et à gauche */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 10px; /* Ajoute de l'espacement interne */
+    background-color: #243e71; /* Couleur de fond */
+    margin-bottom: 10px;
+}
+    
+nav a {
+    text-decoration: none; /* Supprime la surbrillance des liens */
+    color: white; /* Change la couleur du texte */
+    margin-right: 10px; /* Ajoute un espacement à droite des liens */
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* 80% de la hauteur de l'écran */
+}
+
+form {
+    width: 50%; /* Largeur du formulaire */
+    margin: 0 auto; /* Marges automatiques pour centrer l'élément */
+    background-color: #f2f2f2; /* Couleur de fond */
+    padding: 2em; /* Espacement interne */
+    border-radius: 10px; /* Arrondi des bords */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+
+p {
+    margin: 1em 0; /* Ajouter une marge en haut et en bas pour faire ressortir l'élément */
+    font-style: italic;
+}
+  
+h1 {
+    text-align: center; /* Centre le titre */
+    font-size: 2em; /* Augmente la taille de la police */
+    font-weight: bold; /* Met en gras le titre */
+    margin-top: 20px; /* Ajoute un espacement en haut du titre */
+}
+
+hr {
+    border: 0; /* Supprime la bordure par défaut */
+    height: 1px; /* Contrôle l'épaisseur de la ligne */
+    background-color: #ccc; /* Change la couleur de fond */
+    margin-top: 30px; /* Ajoute un espacement en haut de la ligne */
+    margin-bottom: 50px; /* Ajoute un espacement en bas de la ligne */
+}
+
+input[type="text"], input[type="password"], select{
+    width: 100%; /* Largeur des champs de saisie */
+    padding: 12px 20px; /* Espacement interne */
+    margin: 8px 0; /* Espacement externe */
+    box-sizing: border-box; /* Ajustement de la largeur */
+    border: 2px solid #ccc; /* Style de la bordure */
+    border-radius: 4px; /* Arrondi des bords */
+}
+
+input[type="submit"]{
+    width: 100%; /* Largeur du bouton */
+    background-color: #4c6daf; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 14px 20px; /* Espacement interne */
+    margin: 8px 0; /* Espacement externe */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Arrondi des bords */
+    cursor: pointer; /* Pointeur de souris */
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* 80% de la hauteur de l'écran */
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne les éléments qui dépassent */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.buttons a {
+    width: 40%; /* Largeur des boutons */
+    margin: 1em; /* Espacement entre les boutons */
+    text-align: center; /* Centre le texte des boutons */
+    padding: 1em; /* Espacement interne des boutons */
+    background-color: #4c6daf; /* Couleur de fond des boutons */
+    border-radius: 10px; /* Arrondi des bords des boutons */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre des boutons */
+    text-decoration: none; /* Supprime la surbrillance des liens */
+    color: black; /* Couleur du texte des boutons */
+    font-weight: bold; /* Met en gras le texte des boutons */
+}
