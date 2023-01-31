@@ -10,7 +10,7 @@ router.post('/', passport.authenticate('local', {
     }), async (req, res) => {
         try {
             const user = await User.findOne({_id: req.session.passport.user})
-            if(user.secret_question == null || user.secret_answer == null){
+            if(user.secret_question == 0 || user.secret_answer == ''){
                 res.redirect('/firstConnection')
             } else {
                 res.redirect('/home')

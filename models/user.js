@@ -12,10 +12,12 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     secret_question: {
-        type: Number
+        type: Number,
+        default: 0
     },
     secret_answer: {
-        type: String
+        type: String,
+        default: ''
     }
 })
 

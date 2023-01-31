@@ -20,12 +20,13 @@
         <option value="3">Quel était le nom de votre première école ?</option>
     </select>
     <br>
-    <!--TODO : message d'erreur-->
 
     <label for="secret-answer">Réponse à la question secrète :</label>
     <input type="text" id="secret-answer" name="secret_answer" required>
     <br>
-    <!--TODO : message d'erreur-->
+    <% if (hasError != null) { %>
+        <p class="message-error"> <%= hasError %> </p>
+    <% } %>
 
     <input type="submit" value="Réinitialiser le mot de passe">
   </form>
