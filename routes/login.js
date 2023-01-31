@@ -8,11 +8,15 @@ router.post('/', passport.authenticate('local', {
     failureRedirect: '/',
     failureFlash: true
     }), async (req, res) => {
-        const user = await User.findOne({_id: req.session.passport.user})
-        if(user.secret_question == null || user.secret_answer == null){
-            res.redirect('/firstConnection')
-        } else {
-            res.redirect('/home')
+        try {
+            const user = await User.findOne({_id: req.session.passport.user})
+            if(user.secret_question == null || user.secret_answer == null){
+                res.redirect('/firstConnection')
+            } else {
+                res.redirect('/home')
+            }
+        } catch (e) {
+            console.log(e)
         }
     }
     

@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     secret_question: {
-        type: String
+        type: Number
     },
     secret_answer: {
         type: String
