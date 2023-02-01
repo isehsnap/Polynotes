@@ -6,16 +6,14 @@ function initialize(passport)
 {
     const authenticateUser = async (username, password, done) => {
         const user = await Users.findOne({login_id: username})
-        if (user == null || password == null) {
-            return done(null, false, {message : `Votre identifiant ou votre mot de
-            passe est incorrect. `})
+        if(user==null){
+            return done(null, false, {message : 'Votre identifiant est incorrect.'})
         }
         try {
             if(await bcrypt.compare(password, user.password)){
                 return done(null, user)
             } else {
-                return done(null, false, {message : `Votre identifiant ou votre mot de
-                passe est incorrect. `})
+                return done(null, false, {message : 'Votre mot de passe est incorrect.'})
             }
         } catch (error) {
             return done(error)
