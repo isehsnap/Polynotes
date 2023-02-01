@@ -1,28 +1,12 @@
-<% if (secretQuestion == null) {secretQuestion = 'Pas encore de question secrète'} %>
-
-<form action="/forgot?_method=DELETE" method="post">
-    <h1>Réinitialisation de mot de passe</h1>
+<form action="/forgot?_method=PUT" method="post">
+    <h1>Mot de passe oublié</h1>
     <hr>
 
     <label for="username">Nom d'utilisateur :</label>
     <input type="text" id="username" name="username" placeholder="Identifiant" required>
     <br><br>
-
-    <label for="password">Nouveau mot de passe :</label>
-    <input type="password" id="password" name="password" placeholder="Nouveau mot de passe" required>
-    <br><br>
-
-    <label for="password_confirm">Confirmation de mot de passe :</label>
-    <input type="password" id="password_confirm" name="password_confirm" placeholder="Répétez le mot de passe" required>
-    <br><br>
-
-    <label for="question">Question secrète :</label>
-    <input type="text" id="question" name="question" disabled value="<%= secretQuestion %>">
-    <br><br>
-
-    <label for="answer">Réponse à la question secrète :</label>
-    <input type="password" id="answer" name="answer" placeholder="Reponse" required>
-    <br><br>
-
+    <% if (hasError != null) { %>
+        <p class="message-error"> <%- hasError %> </p>
+    <% } %>
     <input type="submit" value="Réinitialiser le mot de passe">
 </form>

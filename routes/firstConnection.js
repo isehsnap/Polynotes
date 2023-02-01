@@ -20,7 +20,7 @@ router.get('/', auth, async (req, res) =>
 
 router.put('/', auth, async (req, res) => {
     try {
-        let user = await User.findOne({_id: req.session.passport.user})
+        let user = await User.findOne({login_id: req.user.username})
         if(req.body.password == req.body.password_confirm
             && req.body.secret_question in [1,2,3]
             && req.body.secret_answer.length > 4)
@@ -33,11 +33,11 @@ router.put('/', auth, async (req, res) => {
             res.redirect('/home')
         } else if(req.body.password != req.body.password_confirm) {
             res.render('logged_in/firstConnection',
-            {hasError: "Echec : Les deux nouveaux mots de passe ne correspondent pas,\nou l'ancien mot de passe est incorrect \nou la réponse fait moins de 4 caractères"})
+            {hasError: "Echec : Les deux nouveaux mots de passe ne correspondent pas,<br>ou la réponse fait moins de 4 caractères."})
         }
     } catch (e) {
         console.log(e)
-        res.redirect('/login')
+        res.redirect('/home')
     }
     
 })

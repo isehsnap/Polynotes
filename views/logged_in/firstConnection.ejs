@@ -1,5 +1,5 @@
 <form id="reset-form" method="POST" action="/firstConnection?_method=PUT">
-    <h1>Première connection : Réinitialisation de mot de passe</h1>
+    <h1>Première connexion : Réinitialisation de mot de passe</h1>
     <p>Bienvenue sur PolyNotes.</p>
     <p>Pour renforcer la sécurité de votre compte, nous vous demandons de réinitialiser votre mot de passe et de choisir une question secrète :</p>
     <hr>
@@ -25,7 +25,7 @@
     <input type="text" id="secret-answer" name="secret_answer" required>
     <br>
     <% if (hasError != null) { %>
-        <p class="message-error"> <%= hasError %> </p>
+        <p class="message-error"> <%- hasError %> </p>
     <% } %>
 
     <input type="submit" value="Réinitialiser le mot de passe">
