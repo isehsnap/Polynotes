@@ -4,18 +4,18 @@ body {
 
 
 nav {
-    display: flex; /* Permet d'aligner les éléments horizontalement */
-    justify-content: space-between; /* Aligne les éléments à droite et à gauche */
+    display: flex; 
+    justify-content: space-between; 
     align-items: center; /* Centre les éléments verticalement */
-    padding: 10px; /* Ajoute de l'espacement interne */
-    background-color: #243e71; /* Couleur de fond */
+    padding: 10px; 
+    background-color: #243e71; 
     margin-bottom: 10px;
 }
     
 nav a {
     text-decoration : none;
-    color: white; /* Change la couleur du texte */
-    margin-right: 10px; /* Ajoute un espacement à droite des liens */
+    color: white; 
+    margin-right: 10px; 
 }
 
 .form-container {
@@ -26,10 +26,10 @@ nav a {
 }
 
 form {
-    width: 50%; /* Largeur du formulaire */
+    width: 50%; 
     margin: 0 auto; /* Marges automatiques pour centrer l'élément */
-    background-color: #f2f2f2; /* Couleur de fond */
-    padding: 2em; /* Espacement interne */
+    background-color: #f2f2f2; 
+    padding: 2em; 
     border-radius: 10px; /* Arrondi des bords */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre */
 }
@@ -46,41 +46,40 @@ p {
 }
   
 .forgot {
-    /*text-decoration : underline;*/
     color: black;
 }
 
 h1 {
-    text-align: center; /* Centre le titre */
-    font-size: 2em; /* Augmente la taille de la police */
-    font-weight: bold; /* Met en gras le titre */
-    margin-top: 20px; /* Ajoute un espacement en haut du titre */
+    text-align: center; 
+    font-size: 2em; 
+    font-weight: bold; 
+    margin-top: 20px; 
 }
 
 hr {
     border: 0; /* Supprime la bordure par défaut */
-    height: 1px; /* Contrôle l'épaisseur de la ligne */
-    background-color: #ccc; /* Change la couleur de fond */
-    margin-top: 30px; /* Ajoute un espacement en haut de la ligne */
-    margin-bottom: 50px; /* Ajoute un espacement en bas de la ligne */
+    height: 1px; 
+    background-color: #ccc;
+    margin-top: 30px; 
+    margin-bottom: 50px; 
 }
 
 input[type="text"], input[type="password"], select{
-    width: 100%; /* Largeur des champs de saisie */
-    padding: 12px 20px; /* Espacement interne */
-    margin: 8px 0; /* Espacement externe */
-    box-sizing: border-box; /* Ajustement de la largeur */
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0;
+    box-sizing: border-box; 
     border: 2px solid #ccc; /* Style de la bordure */
     border-radius: 4px; /* Arrondi des bords */
 }
 
 input[type="submit"]{
-    width: 100%; /* Largeur du bouton */
-    background-color: #425c8e; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    padding: 14px 20px; /* Espacement interne */
-    margin: 8px 0; /* Espacement externe */
-    border: none; /* Pas de bordure */
+    width: 100%; 
+    background-color: #425c8e; 
+    color: white; 
+    padding: 14px 20px; 
+    margin: 8px 0; 
+    border: none; 
     border-radius: 4px; /* Arrondi des bords */
     cursor: pointer; /* Pointeur de souris */
 }
@@ -105,18 +104,18 @@ input[type="file"] {
 .buttons {
     display: flex;
     flex-wrap: wrap; /* Permet de passer à la ligne les éléments qui dépassent */
-    justify-content: center; /* Centre les éléments horizontalement */
+    justify-content: center; 
 }
 
 .buttons a {
-    width: 40%; /* Largeur des boutons */
-    margin: 1em; /* Espacement entre les boutons */
-    text-align: center; /* Centre le texte des boutons */
-    padding: 1em; /* Espacement interne des boutons */
-    background-color: #7596d7; /* Couleur de fond des boutons */
+    width: 40%; 
+    margin: 1em; 
+    text-align: center; 
+    padding: 1em; 
+    background-color: #7596d7; 
     border-radius: 10px; /* Arrondi des bords des boutons */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre des boutons */
     text-decoration: none; /* Supprime la surbrillance des liens */
-    color: black; /* Couleur du texte des boutons */
-    font-weight: bold; /* Met en gras le texte des boutons */
+    color: black;
+    font-weight: bold; 
 }

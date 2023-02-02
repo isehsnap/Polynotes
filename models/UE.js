@@ -1,19 +1,25 @@
 const mongoose = require('mongoose')
 
+// Définition du schéma pour le modèle UE
 const ueSchema = new mongoose.Schema({
-    id: {
-        type: number,
+    code: {
+        type: String,
         required: true
     },
     nom: {
-        type: string,
+        type: String,
         required: true
     },
     coefficient: {
-        type: number,
+        type: Number,
         required: true
     },
+    Semestre: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Semestre'
+    }
 })
-userSchema.plugin(passportLocalMongoose);
 
+// Export du modèle UE en utilisant mongoose.model
 module.exports = mongoose.model('UE', ueSchema)

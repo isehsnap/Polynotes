@@ -1,12 +1,12 @@
 <%- include('../partials/navbar') %>
 
-<form>
+<form action="/uploadModel" method="POST" enctype="multipart/form-data">
     <h1>Publier maquette</h1>
     <hr>
 
     <p>Sélectionnez la promotion et le semestre du modèle.</p>
     
-    <select id="secret-promo" name="promo" required>
+    <select id="secret-promo" name="promotion">
         <option value="">--Promotion--</option>
         <option value="2024">2024</option>
         <option value="2025">2025</option>
@@ -14,19 +14,8 @@
     </select>
     <br>
 
-    <select id="secret-promo" name="semestre" required>
-        <option value="">--Semestre--</option>
-        <option value="S5">Semestre 5</option>
-        <option value="S6">Semestre 6</option>
-        <option value="S7">Semestre 7</option>
-        <option value="S8">Semestre 8</option>
-        <option value="S9">Semestre 9</option>
-        <option value="S10">Semestre 10</option>
-    </select>
-    <br>
-
     <label for="fileInput">Choisir un fichier Excel :</label>
-    <input type="file" id="fileInput" name="fileInput" accept=".xls, .xlsx">
+    <input type="file" id="fileInput" name="file" accept=".xls, .xlsx">
     <br>
-    <input type="submit" value="Publier" onclick="uploadFile()">
+    <input type="submit" value="Publier">
 </form>

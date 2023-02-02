@@ -1,25 +1,27 @@
 const mongoose = require('mongoose')
 const note = require('note.js')
 
+
+// Définition du schéma pour le modèle étiduant
 const etudiantSchema = new mongoose.Schema({
-    id: {
-        type: number,
+    numero: {
+        type: String,
         required: true
     },
     nom: {
-        type: string,
+        type: String,
         required: true
     },
     prenom: {
-        type: string,
+        type: String,
         required: true
     },
-    notes: {
-        type: [note],
-        required: true
-    },
+    Promotion: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Promotion'
+    }
 })
 
-userSchema.plugin(passportLocalMongoose);
-
+// Export du modèle etudiant en utilisant mongoose.model
 module.exports = mongoose.model('Etudiant', etudiantSchema)

@@ -1,31 +1,36 @@
 const mongoose = require('mongoose')
-const ecue = require('ECUE.js')
-const ue = require('UE.js')
-const semestre = require('semestre.js')
 
-
+// Définition du schéma pour le modèle note
 const noteSchema = new mongoose.Schema({
     note: {
-        type: number,
+        type: Number,
         required: true
     },
     session: {
-        type: number,
+        type: Number,
         required: true
     },
-    ecue: {
-        type: ecue,
-        required: true
+    ECUE: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'ECUE'
     },
-    ue: {
-        type: ue,
-        required: true
+    UE: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'UE'
     },
-    semestre: {
-        type: semestre,
-        required: true
+    Semestre: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Semestre'
     },
+    Etudiant: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Etudiant'
+    }
 })
 
-
+// Export du modèle note en utilisant mongoose.model
 module.exports = mongoose.model('Note', noteSchema)

@@ -1,12 +1,12 @@
 <%- include('../partials/navbar') %>
 
-<form>
+<form action="/uploadGrades" method="POST" enctype="multipart/form-data">
     <h1>Publier notes</h1>
     <hr>
 
     <label for="fileInput">Choisir un fichier Excel :</label>
-    <input type="file" id="fileInput" name="fileInput" accept=".xls, .xlsx">
+    <input type="file" id="fileInput" name="file" accept=".xls, .xlsx">
     <br>
 
-    <input type="submit" value="Publier" onclick="uploadFile()">
+    <input type="submit" value="Publier">
 </form>

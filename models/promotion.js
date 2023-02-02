@@ -1,27 +1,12 @@
 const mongoose = require('mongoose')
-const etudiant = require('etudiant.js')
 
+// Définition du schéma pour le modèle promotion
 const promotionSchema = new mongoose.Schema({
-    id: {
-        type: number,
-        required: true
-    },
     annee: {
-        type: number,
+        type: Number,
         required: true
-    },
-    dateDebut: {
-        type: date,
-        required: true
-    },
-    dateFin: {
-        type: date,
-        required: true
-    },
-    etudiants: {
-        type: [etudiant],
-        required: true
-    },
+    }
 })
 
+// Export du modèle promotion en utilisant mongoose.model
 module.exports = mongoose.model('Promotion', promotionSchema)

@@ -1,19 +1,21 @@
 const mongoose = require('mongoose')
 
+// Définition du schéma pour le modèle schéma
 const semestreSchema = new mongoose.Schema({
-    id: {
-        type: number,
+    code: {
+        type: String,
         required: true
     },
-    numero: {
-        type: string,
+    num: {
+        type: Number,
         required: true
     },
-    annee: {
-        type: number,
-        required: true
-    },
+    Promotion: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Promotion'
+    }
 })
-userSchema.plugin(passportLocalMongoose);
 
+// Export du modèle semestre en utilisant mongoose.model
 module.exports = mongoose.model('Semestre', semestreSchema)

@@ -1,7 +1,9 @@
+// Importe les modules nécessaires
 const express = require('express')
 const router = express.Router()
 const auth = require('../middlewares/auth')
 
+// Route pour gérer l'affichage des notes
 router.get('/', auth, async (req, res) =>
 {
     try {
@@ -11,7 +13,5 @@ router.get('/', auth, async (req, res) =>
     }
 })
 
-router.put('/', auth, async (req, res) => {
-})
-
+// Exportation du routeur pour pouvoir être utilisé ailleurs dans l'application
 module.exports = router

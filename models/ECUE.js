@@ -1,20 +1,25 @@
 const mongoose = require('mongoose')
 
+// Définition du schéma pour le modèle ECUE
 const ecueSchema = new mongoose.Schema({
-    id: {
-        type: number,
+    code: {
+        type: String,
         required: true
     },
     nom: {
-        type: string,
+        type: String,
         required: true
     },
     coefficient: {
-        type: number,
+        type: Number,
         required: true
     },
+    UE: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'UE'
+    }
 })
 
-userSchema.plugin(passportLocalMongoose);
-
+// Export du modèle ECUE en utilisant mongoose.model
 module.exports = mongoose.model('ECUE', ecueSchema)
